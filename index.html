@@ -8,18 +8,18 @@
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="stylesheet"
-		href="style.min.css">
+	<link rel="stylesheet" href="src/style.min.css">
 
-	<link rel="shortcut icon" href="avatar.png">
+	<link rel="shortcut icon" href="src/avatar.png">
 
-		
-	<script src="script.js"></script>
+
+	<script src="src/script.js"></script>
 	<script>window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
 
 </head>
 
-<body>
+<body onload="javascript:digitalClock()">
+	<script src="time.js"></script>
 	<div class="container">
 		<header class="header">
 			<div class="header__inner">
@@ -37,13 +37,8 @@
 
 				<div class="header__right">
 
-					<span class="menu-trigger hidden">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-							<path d="M0 0h24v24H0z" fill="none"></path>
-							<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
-						</svg>
-					</span>
-
+					<strong><span id="time-js" style="color: #fe5186; font-size: 18px;"></span></strong>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					<span class="theme-toggle">
 						<svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none"
 							xmlns="http://www.w3.org/2000/svg">
@@ -81,18 +76,19 @@
 					<figure class="center" style="max-width: 500px">
 						<a href="https://blog.cavelab.dev/about/me.png">
 							<picture>
-								<source type="image/png" sizes="(min-width: 150px) 250px"
-									srcset="avatar.png">
-								<img loading="lazy" class="center" src="avatar.png"
+								<source type="image/png" sizes="(min-width: 150px) 250px" srcset="src/avatar.png">
+								<img loading="lazy" class="center" src="src/avatar.png"
 									alt="Me, at work, with computer glasses and headphones" width="250" height="250">
 							</picture>
 						</a>
 					</figure>
-                    <br>
-					<p>I’m a person who does things, I love doing and learning about new things. One day i went to NASA and stole there rocket and went to Mars, so now i live on 
+					<br>
+					<p>I’m a person who does things, I love doing and learning about new things. One day i went to NASA
+						and stole there rocket and went to Mars, so now i live on
 						<a href="https://en.wikipedia.org/wiki/Mars">Mars</a>.
 						I’m 13teen and find computers with Linux, electronics and home
-						automation things pretty fascinating. I’m also a fan of screwing things.</p>
+						automation things pretty fascinating. I’m also a fan of screwing things.
+					</p>
 					<div class="notice--info">
 						I don’t know what i’m doing and how i’m here please send help.
 					</div>
@@ -103,7 +99,8 @@
 </span></span></code></pre>
 					</div>
 					<div class="highlight">
-						<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"> <span class="s2">To know more information about me run:</span> <span class="nb">npx reASS</span></code></pre>
+						<pre tabindex="0"
+							class="chroma"><code class="language-bash" data-lang="bash"> <span class="s2">To know more information about me run:</span> <span class="nb">npx reASS</span></code></pre>
 					</div>
 					<p>I’m also on <a href="https://github.com/rajveer2009">Github</a> and <a
 							href="https://www.youtube.com/@rajveer_2009">YouTube</a>.</p>
@@ -135,9 +132,11 @@
 					</h2>
 					<p>This website doesn’t store your data; track you; use cookies, advertisements, or affiliate links.
 					</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ornare odio elit, in consectetur dolor suscipit in.
-					Aliquam quis sagittis purus. Nullam eu metus a odio malesuada venenatis a et erat. Mauris iaculis elementum convallis.
-					Mauris id purus lorem.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ornare odio elit, in consectetur
+						dolor suscipit in.
+						Aliquam quis sagittis purus. Nullam eu metus a odio malesuada venenatis a et erat. Mauris
+						iaculis elementum convallis.
+						Mauris id purus lorem.</p>
 					<p><strong>Bye, World.</strong></p>
 				</div>
 
@@ -148,38 +147,39 @@
 
 		<div class="footer__inner">
 			<a href="/" class="logo" style="text-decoration: none;">
-		
-				<span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+
+				<span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon"
+						viewBox="0 0 44 44">
 						<path fill="none" d="M15 8l14.729 14.382L15 35.367"></path>
 					</svg>
 				</span>
 				<span class="logo__text">about@rajveer:~$</span>
 				<span class="logo__cursor"></span>
-		
+
 			</a>
-		
+
 			<div class="copyright">
 				<span>
 					© 2023 Licensed under <a rel="license" href="https://rajveer2009.github.io/LICENSE">MIT License</a>
 				</span>
 				<span>
-						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none"
-							stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-							class="feather feather-rss">
-							<path d="M4 11a9 9 0 0 1 9 9"></path>
-							<path d="M4 4a16 16 0 0 1 16 16"></path>
-							<circle cx="5" cy="19" r="1"></circle>
-						</svg>
-		
+					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none"
+						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+						class="feather feather-rss">
+						<path d="M4 11a9 9 0 0 1 9 9"></path>
+						<path d="M4 4a16 16 0 0 1 16 16"></path>
+						<circle cx="5" cy="19" r="1"></circle>
+					</svg>
+
 					</a>
 				</span>
 			</div>
 		</div>
 		<div class="footer__inner sub__footer">
 			<div class="copyright">
-		
+
 				<span>Build # 1</span>
-		
+
 				<span>2023-01-05</span>
 			</div>
 		</div>
