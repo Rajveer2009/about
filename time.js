@@ -19,4 +19,4 @@ function addZero(i) {
     return i;
 }
 
-setInterval(digitalClock, 60000);  
+setInterval(digitalClock, 1000);  
